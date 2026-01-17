@@ -43,7 +43,7 @@ async function tampilkanData() {
         //    - apikey: Identitas klien.
         //    - s: Kata kunci pencarian film dari input user.
         //    'await' menunda eksekusi baris berikutnya hingga server merespons.
-        const response = await fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=` + encodeURIComponent(teks.value));
+        const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=` + encodeURIComponent(teks.value));
 
 
         // 2. Validasi Status HTTP:
