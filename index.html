@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+        href="style.css">
+</head>
+
+<body>
+
+    <!-- Form Konfigurasi API Key -->
+    <div class="form"
+        style="background-color: #e6e6fa; margin-top: 50px; margin-bottom: 15px;">
+        <input type="text"
+            class="teks"
+            id="api-key"
+            placeholder="Masukkan API Key OMDb Anda">
+        <input type="button"
+            class="btn"
+            id="btn-key"
+            value="Save Key">
+    </div>
+    <div class="key-info">
+        <p>Belum punya API Key? Dapatkan gratis di <a href="https://www.omdbapi.com/apikey.aspx"
+                target="_blank">OMDb API Key</a>.</p>
+        <p style="font-size: 0.8rem; margin-top: 5px; opacity: 0.9; color: #d9534f;"><strong>Info Keamanan:</strong> API
+            Key disimpan secara lokal di browser Anda (LocalStorage) dan tidak dikirim ke server pengembang. 100% Aman,
+            untuk menghapus nya hapus data Browser anda atau <a href="#"
+                id="delete-key"
+                style="color: inherit; text-decoration: underline;">klik disini</a></p>
+    </div>
+
+
+
+    <div class="form">
+        <input type="text"
+            class="teks"
+            id="teks">
+        <input type="button"
+            class="btn"
+            id="btn"
+            value="Search">
+    </div>
+
+
+    <div class="
+    container">
+
+    </div>
+    <div class="info-mechanism">
+        <h2>Mekanisme Web API (OMDb)</h2>
+        <p>Aplikasi ini mendemonstrasikan cara kerja <strong>Fetch API</strong> dengan langkah-langkah berikut:</p>
+        <ul>
+            <li><strong>1. Request:</strong> Browser mengirim permintaan HTTP GET ke endpoint
+                <code>http://www.omdbapi.com/</code>.
+            </li>
+            <li><strong>2. Parameter:</strong> URL menyertakan <code>apikey=[API_KEY]</code> (untuk otentikasi) dan
+                <code>s=[judul]</code> (query pencarian).
+            </li>
+            <li><strong>3. Asynchronous:</strong> Kode menggunakan <code>async/await</code> untuk menunggu respon server
+                tanpa membekukan antarmuka pengguna.</li>
+            <li><strong>4. Response:</strong> Server OMDb mengembalikan data dalam format <strong>JSON</strong>.</li>
+            <li><strong>5. DOM Manipulation:</strong> JavaScript memproses JSON tersebut dan membuat elemen HTML (kartu
+                film) secara dinamis.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Movie Finder</h3>
+            <p>Temukan informasi film favoritmu dengan mudah menggunakan OMDb API.</p>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Movie Search App. Created with Alone</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
